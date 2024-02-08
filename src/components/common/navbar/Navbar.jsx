@@ -5,11 +5,9 @@ import { Link, useLocation } from "react-router-dom";
 function Navbar() {
   const [activeSection, setActiveSection] = useState("");
 
- 
-// const location =    useLocation(); 
+  // const location =    useLocation();
 
   useEffect(() => {
-     
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -32,46 +30,44 @@ function Navbar() {
 
   return (
     <div className="navbar">
-      <div className="navElements">
-        <ul className="navItems">
-          <li className="navItem">
-            <a
-              href="#information"
-              className="navItem"
-              style={{ textDecoration: "none" }}
-            >
-              Me
-            </a>
-          </li>
-          <li className="navItem">
-            <a
-              href="#experience"
-              className="navItem"
-              style={{ textDecoration: "none" }}
-            >
-              Exprerience
-            </a>
-          </li>
-          <li className="navItem">
-            <a
-              href="#education"
-              className="navItem"
-              style={{ textDecoration: "none" }}
-            >
-              Education
-            </a>
-          </li>
-          <li className="navItem">
-            <a
-              href="#projects"
-              className="navItem"
-              style={{ textDecoration: "none" }}
-            >
-              Projects
-            </a>
-          </li>
-        </ul>
-      </div>
+      <ul className="navItems">
+        <li className="navItem">
+          <a
+            href="#information"
+            className="navItem"
+            style={{ textDecoration: "none" }}
+          >
+            <div className="ball"></div>
+          </a>
+        </li>
+        <li className="navItem">
+          <a
+            href="#experience"
+            className="navItem"
+            style={{ textDecoration: "none" }}
+          >
+            <div className="ball"></div>
+          </a>
+        </li>
+        <li className="navItem">
+          <a
+            href="#education"
+            className="navItem"
+            style={{ textDecoration: "none" }}
+          >
+            <div className="ball"></div>
+          </a>
+        </li>
+        <li className="navItem">
+          <a
+            href="#projects"
+            className="navItem"
+            style={{ textDecoration: "none" }}
+          >
+            <div className="ball"></div>
+          </a>
+        </li>
+      </ul>
     </div>
   );
 }
