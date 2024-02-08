@@ -3,7 +3,7 @@ import React from "react";
 
 function Experience() {
   return (
-    <div id="" className="experience">
+    <div id="experience" className="experience">
       <h1>Experience</h1>
     </div>
   );

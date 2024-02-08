@@ -1,10 +1,12 @@
-import "./InformationStyle.css"
-import React from 'react'
+import "./InformationStyle.css";
+import React from "react";
 
 function Information() {
   return (
-    <div className="information">Information</div>
-  )
+    <div className="information" id="information">
+      Information
+    </div>
+  );
 }
 
-export default Information
+export default Information;

@@ -1,5 +1,5 @@
 import "./App.css";
-import Navbar from "./components/common/navbar/Navbar";
+import Navbar from "./components/common/switchbar/Switchbar";
 import Home from "./pages/home/Home";
 import RouterIndex from "./router/RouterIndex"; 
 import { useScrollSpy } from "./utils/useScrollSpy";
