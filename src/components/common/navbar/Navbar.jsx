@@ -4,11 +4,12 @@ import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
   const [activeSection, setActiveSection] = useState("");
-  
+
+ 
 // const location =    useLocation(); 
 
   useEffect(() => {
-    debugger;
+     
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -44,7 +45,7 @@ function Navbar() {
           </li>
           <li className="navItem">
             <a
-              href="#exprerience"
+              href="#experience"
               className="navItem"
               style={{ textDecoration: "none" }}
             >

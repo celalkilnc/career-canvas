@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
  export function useScrollSpy() {
   useEffect(() => {
     const handleScroll = () => {
-        debugger;
+         
       const sections = document.querySelectorAll('section');
       let scrollPosition = window.scrollY + window.innerHeight / 3;
 
