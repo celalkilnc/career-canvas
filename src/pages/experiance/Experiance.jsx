@@ -1,10 +1,12 @@
-import "./Experiance.css"
-import React from 'react'
+import "./Experiance.css";
+import React from "react";
 
 function Experience() {
   return (
-    <h1 className="test">Experience</h1>
-  )
+    <div id="" className="experience">
+      <h1>Experience</h1>
+    </div>
+  );
 }
 
-export default Experience
+export default Experience;

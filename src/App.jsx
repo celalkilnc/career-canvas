@@ -1,12 +1,18 @@
 import "./App.css";
 import Navbar from "./components/common/navbar/Navbar";
-import RouterIndex from "./router/RouterIndex";
+import Home from "./pages/home/Home";
+import RouterIndex from "./router/RouterIndex"; 
+import { useScrollSpy } from "./utils/useScrollSpy";
+ 
+
 
 function App() {
+  useScrollSpy();
+
   return (
     <div className="app">
       <Navbar />
-      <RouterIndex />
+      <Home />
     </div>
   );
 }
