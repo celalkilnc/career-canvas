@@ -20,7 +20,7 @@
     justify-content: space-between;
     align-items: center;
 
-    background-color: rgba(74, 74, 82,0.6);
+    background-color: rgba(74, 74, 82, 0.6);
     border-radius: 20px;
 }
 
@@ -43,9 +43,9 @@
     background-color: yellow;
 }
 
-.switchItem .active{
+.switchItem .active {
     color: #4a4a52;
-} 
+}
 
 .ball {
     width: 10px;
@@ -62,24 +62,32 @@
     background-color: yellow;
 }
 
- .active {
+.active {
     background-color: yellow;
 }
 
 @media only screen and (max-width: 780px) {
-    /* .container {
-      padding: 0;
-      justify-content: space-around;
-      align-items: end;
+    .container {
+        padding: 0;
+        justify-content: space-around;
+        align-items: end;
     }
-  
+
     .switchBar {
-      padding: 0 0.5rem;
-      flex-direction: row;
-      margin-bottom: 1rem;
+        padding: 0.3rem 1rem;
+        flex-direction: row;
+        margin-bottom: 1rem;
+        width: 4rem;
+        height: fit-content;
     }
-  
+
+    .switchItem {
+        max-width: 5px;
+        padding: 0;
+    }
+
     .ball {
-      padding: 0.2rem;
-    } */
-  }
+        margin: 0;
+        padding: 0;
+    }
+}
