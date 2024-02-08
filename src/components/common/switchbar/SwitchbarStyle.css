@@ -38,14 +38,14 @@
     height: 10px;
 }
 
-.switchItem:hover {
+/* .switchItem:hover {
     cursor: pointer;
     background-color: yellow;
 }
 
 .switchItem .active {
     color: #4a4a52;
-}
+} */
 
 .ball {
     width: 10px;
@@ -53,18 +53,24 @@
     border-radius: 15px;
     margin: 0;
     padding: 0;
-    background-color: rgba(255, 255, 255, 0.6);
-
+    background-color: rgba(45,48,55,255);
     transition: 0.1s;
 }
 
 .ball:hover {
-    background-color: yellow;
+    background-color: rgb(89, 187, 255);
 }
 
 .active {
-    background-color: yellow;
+    background-color:  rgb(89, 187, 255);
 }
+
+.no-copy {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 
 @media only screen and (max-width: 780px) {
     .container {

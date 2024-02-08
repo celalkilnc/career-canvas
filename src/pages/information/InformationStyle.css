@@ -1,5 +1,11 @@
-.information{
-    background-color: rgb(8, 236, 0);
-height: 35rem;
-width: 100%;
+.information {
+    background-color: rgba(10, 22, 38, 255);
+    /* background: radial-gradient(
+        at center,
+        rgba(10,22,38,0.9) 0%,
+        rgba(10,22,38, 1) 50%,
+        rgba(10,22,38,255) 100%
+      ); */
+    min-height: 100vh;
+    width: 100%;
 }
