@@ -38,27 +38,19 @@
     height: 10px;
 }
 
-/* .switchItem:hover {
-    cursor: pointer;
-    background-color: yellow;
-}
-
-.switchItem .active {
-    color: #4a4a52;
-} */
-
 .ball {
     width: 10px;
     height: 10px;
     border-radius: 15px;
     margin: 0;
     padding: 0;
-    background-color: rgba(45,48,55,255);
+    background-color: black;
     transition: 0.1s;
 }
 
 .ball:hover {
     background-color: rgb(89, 187, 255);
+    cursor: pointer;
 }
 
 .active {
