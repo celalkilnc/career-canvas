@@ -4,19 +4,19 @@ import "./Experiance.css";
 function Experience() {
   const experiences = [
     {
-      company: "XYZ Teknoloji",
-      position: "Senior Software Developer",
-      period: "2022 - Devam Ediyor",
-      description: "React ve Node.js kullanarak web uygulamaları geliştirme, takım liderliği ve mentorluk.",
-      technologies: ["React", "Node.js", "MongoDB", "AWS"]
+      company: "San TSG",
+      position: "Backend Developer",
+      period: "2023 - Devam Ediyor",
+      description: ".Net Core ve C# kullanarak web uygulamaları geliştirme.",
+      technologies: ["C#", ".Net Core", "MongoDB", "AWS"]
     },
-    {
-      company: "ABC Yazılım",
-      position: "Full Stack Developer",
-      period: "2020 - 2022",
-      description: "E-ticaret platformları geliştirme, mikroservis mimarisi ile çalışma.",
-      technologies: ["Vue.js", "Python", "PostgreSQL", "Docker"]
-    },
+    // {
+    //   company: "ABC Yazılım",
+    //   position: "Full Stack Developer",
+    //   period: "2020 - 2022",
+    //   description: "E-ticaret platformları geliştirme, mikroservis mimarisi ile çalışma.",
+    //   technologies: ["Vue.js", "Python", "PostgreSQL", "Docker"]
+    // },
     // Diğer deneyimlerinizi ekleyebilirsiniz
   ];
 
