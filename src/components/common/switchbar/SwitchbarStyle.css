@@ -1,60 +1,49 @@
 .container {
     position: fixed;
-
     width: 100%;
     height: 100%;
-
     display: flex;
     justify-content: end;
     align-items: center;
+    z-index: 1000;
 }
 
 .switchBar {
-    width: 2rem;
-    height: 4rem;
-    padding: 1rem 0;
-    margin-right: 1rem;
-
+    width: 2.5rem;
+    height: auto;
+    padding: 1.5rem 0.5rem;
+    margin-right: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
-    background-color: rgba(74, 74, 82, 0.6);
-    border-radius: 20px;
+    gap: 1rem;
+    background-color: rgba(10, 22, 38, 0.8);
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
 }
 
 .switchItem {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-
     list-style-type: none;
-    border-radius: 20px;
-
-
-    width: 10px;
-    height: 10px;
 }
 
 .ball {
-    width: 10px;
-    height: 10px;
-    border-radius: 15px;
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    transition: 0.1s;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
 }
 
 .ball:hover {
-    background-color: rgb(89, 187, 255);
-    cursor: pointer;
+    background-color: #87CEEB;
+    transform: scale(1.2);
 }
 
 .active {
-    background-color:  rgb(89, 187, 255);
+    background-color: #87CEEB;
+    box-shadow: 0 0 10px rgba(135, 206, 235, 0.5);
 }
 
 .no-copy {
