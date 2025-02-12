@@ -5,9 +5,9 @@ import "./InformationStyle.css";
 function Information() {
   const personalInfo = [
     { key: "Ad Soyad", value: "Celal KILINÇ" },
-    { key: "Ünvan", value: "Software Developer" },
+    { key: "Ünvan", value: "Full-Stack Developer" },
     { key: "E-posta", value: "your.email@example.com" },
-    { key: "Konum", value: "İstanbul, Türkiye" },
+    { key: "Konum", value: "Antalya, Türkiye" },
   ];
 
   return (
