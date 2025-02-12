@@ -4,26 +4,23 @@ import "./EducationStyle.css"
 function Education() {
   const educations = [
     {
-      school: "X Üniversitesi",
-      degree: "Bilgisayar Mühendisliği",
-      period: "2018 - 2022",
-      gpa: "3.50/4.00",
+      school: "Pamukkale Üniversitesi",
+      degree: "Bilgisayar Programcılığı",
+      period: "2021 - 2023",
+      gpa: "3.00/4.00",
       description: "Veri yapıları, algoritma analizi, yazılım mühendisliği ve web teknolojileri üzerine kapsamlı eğitim.",
       achievements: [
         "Mezuniyet Projesi: AI destekli öğrenme platformu",
-        "Bölüm ikinciliği",
-        "4 dönem onur öğrencisi"
       ]
     },
     {
-      school: "Y Lisesi",
-      degree: "Fen Bilimleri",
-      period: "2014 - 2018",
-      gpa: "95/100",
-      description: "Matematik ve fen bilimleri ağırlıklı eğitim.",
+      school: "Anadolu Üniversitesi",
+      degree: "Yönetim Bilişim Sistemleri",
+      period: "2024 - 2028",
+      gpa: "3.00/4.00",
+      description: "Veri yapıları, algoritma analizi, yazılım mühendisliği ve web teknolojileri üzerine kapsamlı eğitim.",
       achievements: [
-        "Okul birinciliği",
-        "Bilim olimpiyatları katılımı"
+        "Mezuniyet Projesi: AI destekli öğrenme platformu",
       ]
     }
   ];
