@@ -2,7 +2,7 @@
   position: absolute;
   display: flex;
   gap: 1rem;
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
   border-radius: 16px;
   z-index: 1000;
   width: fit-content;
@@ -13,7 +13,15 @@
   list-style: none;
   display: flex;
   gap: 1.5rem;
-  background: dimgrey;
+  backdrop-filter: blur(10px);
+  margin: 0;
+  box-shadow: 0 0 7px rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.switchBar:hover {
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
 }
 
 /* Mobil görünüm için */
@@ -39,9 +47,11 @@
     right: 2rem;
     transform: translateY(-50%);
     flex-direction: column;
+    background: transparent;
   }
 
   .switchBar {
     flex-direction: column;
+    background: transparent;
   }
 } 

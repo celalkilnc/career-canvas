@@ -10,15 +10,15 @@ function LanguageSwitch() {
   };
 
   return (
-    <div className="language-switch">
+    <div className="language-switch-container">
       <button
-        className={`lang-btn ${i18n.language === 'tr' ? 'active' : ''}`}
+        className={`language-button ${i18n.language === 'tr' ? 'active' : ''}`}
         onClick={() => changeLanguage('tr')}
       >
         TR
       </button>
       <button
-        className={`lang-btn ${i18n.language === 'en' ? 'active' : ''}`}
+        className={`language-button ${i18n.language === 'en' ? 'active' : ''}`}
         onClick={() => changeLanguage('en')}
       >
         EN

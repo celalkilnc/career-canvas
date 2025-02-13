@@ -36,7 +36,7 @@ function Projects() {
   return (
     <div id="projects" className="projects">
       <div className="projects-container">
-        <h1>{t('projects.title')}</h1>
+        <h1 className="projects-title">{t('projects.title')}</h1>
         
         <section className="projects-section">
           <h2>{t('projects.myProjects')}</h2>

@@ -47,12 +47,12 @@
     top: auto;
     bottom: 2rem;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); 
   }
 
   .switchBar {
     flex-direction: row;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem; 
   }
 
   .switch-dot {
@@ -111,10 +111,10 @@
     }
 
     .switchBar {
-        padding: 0.3rem 1rem;
+        /* padding: 0.3rem 1rem; */
         flex-direction: row;
         margin-bottom: 1rem;
-        width: 4rem;
+        width: fit-content;
         height: fit-content;
     }
 

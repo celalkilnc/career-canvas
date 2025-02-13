@@ -7,6 +7,10 @@
   justify-content: center;
 }
 
+.projects-title { 
+  text-align: center; 
+}
+
 .projects-container {
   max-width: 1200px;
   width: 100%;
@@ -14,7 +18,7 @@
 
 .projects-container h1 {
   color: #ffffffdd;
-  text-align: left;
+  text-align: center;
   margin-bottom: 3rem;
   font-size: 3rem;
 }
