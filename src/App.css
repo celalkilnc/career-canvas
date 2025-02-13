@@ -28,6 +28,15 @@ body {
   flex-direction: column;
 }
 
+/* Tüm ana içerik bölümlerinin canvas'ın üzerinde görünmesini sağlayalım */
+.home,
+.projects,
+.education,
+.experience {
+  position: relative;
+  z-index: 2;
+}
+
 /* Sayfa bölümleri için genel stil */
 section {
   min-height: 100vh;

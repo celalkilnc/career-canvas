@@ -2,6 +2,7 @@ import InformationCard from "../../components/InfoCard/InformationCard";
 import "./InformationStyle.css";
 import { useTranslation } from 'react-i18next';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import InteractiveBackground from '../../components/background/InteractiveBackground';
 // import React from "react";
 
 function Information() {
@@ -31,6 +32,7 @@ function Information() {
 
   return (
     <div className="information" id="information">
+      <InteractiveBackground />
       <div className="info-container">
         <div className="profile-section">
           <h1>Celal KILINÇ</h1>
