@@ -1,0 +1,85 @@
+{
+  "sections": {
+    "information": "Information",
+    "experience": "Experience",
+    "education": "Education",
+    "projects": "Projects"
+  },
+  "info": {
+    "title": "Title",
+    "description": "Software Developer",
+    "fullName": "Full Name",
+    "email": "Email",
+    "location": "Location",
+    "locationValue": "Antalya, Turkey",
+    "aboutMe": "I am a passionate developer who is open to continuous learning in software development. Experienced in modern web technologies with strong problem-solving skills..."
+  },
+  "experience": {
+    "title": "Experience",
+    "current": "Current",
+    "jobs": [
+      {
+        "title": "Backend Developer",
+        "company": "San TSG",
+        "date": "July 2023 - Present",
+        "description": "Developing web applications using .Net Core and C#.",
+        "technologies": ["C#", ".Net Core", "MongoDB", "AWS"]
+      },
+      {
+        "title": "Intern",
+        "company": "San TSG",
+        "date": "February 2023 - June 2023",
+        "description": "Gained practical experience in web application development, user interface design and implementation, database management",
+        "technologies": ["React", "JavaScript", "HTML", "CSS"]
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "achievements": "Achievements",
+    "university": {
+      "name": "Pamukkale University",
+      "department": "Computer Programming",
+      "date": "2021 - 2023",
+      "description": "Comprehensive education in data structures, algorithm analysis, software engineering, and web technologies.",
+      "courses": [
+        "Graduation Project: Messaging Application"
+      ]
+    },
+    "university2": {
+      "name": "Anadolu University",
+      "department": "Management Information Systems",
+      "date": "2024 - Present",
+      "description": "Comprehensive education in data structures, algorithm analysis, software engineering, and web technologies.",
+      "courses": [
+        "Graduation Project: AI-powered learning platform"
+      ]
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "viewProject": "View Project",
+    "items": [
+      {
+        "title": "Personal Portfolio",
+        "description": "Personal portfolio website developed using React and modern web technologies",
+        "technologies": ["React", "Vite", "CSS3", "i18next"],
+        "link": "https://github.com/username/portfolio",
+        "status": "In Progress"
+      },
+      {
+        "title": "Career Canvas",
+        "description": "Web application for visualizing career development and experiences",
+        "technologies": ["React", "Node.js", "MongoDB", "Express"],
+        "link": "https://github.com/username/career-canvas",
+        "status": "Completed"
+      }
+    ]
+  },
+  "common": {
+    "technologies": "Technologies Used",
+    "viewMore": "View More",
+    "date": "Date",
+    "present": "Present"
+  }
+} 

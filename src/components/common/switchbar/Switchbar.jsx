@@ -1,18 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./SwitchbarStyle.css";
 import SwtitchButton from "./SwtitchButton";
-import { Link } from "react-scroll";
+import { useTranslation } from 'react-i18next';
+import '../../../styles/switchbar.css';
 
 function Switchbar() {
+  const { t } = useTranslation();
+
   return (
-    <div className="container">
-      <lu className="switchBar">
-        <SwtitchButton path={"information"} />
-        <SwtitchButton path={"experience"} />
-        <SwtitchButton path={"education"} />
-        <SwtitchButton path={"projects"} />
-      </lu>
-    </div>
+    <nav className="switchbar">
+      <ul className="switchBar">
+        <SwtitchButton path="information" label={t('sections.information')} />
+        <SwtitchButton path="experience" label={t('sections.experience')} />
+        <SwtitchButton path="education" label={t('sections.education')} />
+        <SwtitchButton path="projects" label={t('sections.projects')} />
+      </ul>
+    </nav>
   );
 }
 

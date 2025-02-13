@@ -16,10 +16,19 @@
  
 body {
   margin: 0;
-  display: flex; 
   min-width: 320px;
-  min-height: 100vh; 
-  justify-content: center;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 /* src/index.css veya src/App.css */
@@ -69,4 +78,50 @@ body {
 /* Yatay scrollbar çubuğu kenarlığı */
 ::-webkit-scrollbar-thumb:horizontal {
   border: 2px solid #fff;
+}
+
+/* Responsive tasarım için temel ayarlar */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobil öncelikli yaklaşım için container */
+.container {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Breakpoint'ler */
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
 }

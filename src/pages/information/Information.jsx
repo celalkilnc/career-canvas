@@ -1,24 +1,25 @@
 import InformationCard from "../../components/InfoCard/InformationCard";
 import "./InformationStyle.css";
+import { useTranslation } from 'react-i18next';
 // import React from "react";
 
 function Information() {
+  const { t } = useTranslation();
+
   const personalInfo = [
-    { key: "Ad Soyad", value: "Celal KILINÇ" },
-    { key: "Ünvan", value: "Full-Stack Developer" },
-    { key: "E-posta", value: "your.email@example.com" },
-    { key: "Konum", value: "Antalya, Türkiye" },
+    { key: t('info.fullName'), value: "Celal KILINÇ" },
+    { key: t('info.title'), value: t('info.description') },
+    { key: t('info.email'), value: "your.email@example.com" },
+    { key: t('info.location'), value: t('info.locationValue') },
   ];
 
   return (
     <div className="information" id="information">
       <div className="info-container">
         <div className="profile-section">
-          <div className="profile-image">
-            {/* Profil fotoğrafınızı ekleyin */}
-          </div>
+         
           <h1>Celal KILINÇ</h1>
-          <h2>Software Developer</h2>
+          <h2>{t('info.description')}</h2>
         </div>
         <div className="info-cards">
           {personalInfo.map((info, index) => (
@@ -26,10 +27,7 @@ function Information() {
           ))}
         </div>
         <div className="about-me">
-          <p>
-            Yazılım geliştirme konusunda tutkulu ve sürekli öğrenmeye açık bir geliştiriciyim. 
-            Modern web teknolojileri konusunda deneyimli, problem çözme becerileri güçlü...
-          </p>
+          <p>{t('info.aboutMe')}</p>
         </div>
       </div>
     </div>

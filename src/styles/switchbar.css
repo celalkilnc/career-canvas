@@ -1,0 +1,48 @@
+.switchbar {
+  position: absolute;
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem;
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  z-index: 1000;
+  width: fit-content;
+
+}
+
+.switchBar {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  background: dimgrey;
+}
+
+/* Mobil görünüm için */
+@media (max-width: 767px) {
+  .switchbar {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
+    padding: 1rem;
+  }
+
+  .switchBar {
+    gap: 1rem;
+  }
+}
+
+/* Tablet ve desktop görünüm için */
+@media (min-width: 768px) {
+  .switchbar {
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    flex-direction: column;
+  }
+
+  .switchBar {
+    flex-direction: column;
+  }
+} 

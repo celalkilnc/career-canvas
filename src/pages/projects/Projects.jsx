@@ -1,12 +1,12 @@
 import "./ProjectsStyle.css"
-// import React from 'react'
+import React from 'react'
 
 function Projects() {
   const projects = [
     {
       title: "Career Canvas",
       description: "Kişisel portfolio web sitesi. React ve modern web teknolojileri kullanılarak geliştirildi.",
-      image: "/project-images/career-canvas.jpg", // Proje görseli ekleyebilirsiniz
+      image: "/project-images/career-canvas.jpg",
       technologies: ["React", "CSS3", "Vite"],
       links: {
         github: "https://github.com/username/career-canvas",
@@ -22,8 +22,7 @@ function Projects() {
         github: "https://github.com/username/e-commerce",
         live: "https://e-commerce-demo.com"
       }
-    },
-    // Diğer projelerinizi ekleyebilirsiniz
+    }
   ];
 
   return (
