@@ -40,14 +40,14 @@ function Education() {
                   <span>GPA: {edu.gpa}</span>
                 </div>
               )}
-              <div className="achievements">
+          {/*     <div className="achievements">
                 <h4>{t('education.achievements')}:</h4>
                 <ul>
                   {edu.achievements.map((achievement, i) => (
                     <li key={i}>{achievement}</li>
                   ))}
                 </ul>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

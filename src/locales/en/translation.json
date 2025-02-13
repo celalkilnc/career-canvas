@@ -23,14 +23,14 @@
         "company": "San TSG",
         "date": "July 2023 - Present",
         "description": "Developing web applications using .Net Core and C#.",
-        "technologies": ["C#", ".Net Core", "MongoDB", "AWS"]
+        "technologies": ["C#", "MSSQL", ".NET Core MVC", ".NET Core Web API", "AWS"]
       },
       {
         "title": "Intern",
         "company": "San TSG",
         "date": "February 2023 - June 2023",
         "description": "Gained practical experience in web application development, user interface design and implementation, database management",
-        "technologies": ["React", "JavaScript", "HTML", "CSS"]
+        "technologies": ["React", "JavaScript", "HTML", "CSS", ".NET Core Web API", "PostgreSQL"]
       }
     ]
   },

@@ -45,14 +45,14 @@
         "company": "San TSG",
         "date": "Temmuz 2023 - Devam Ediyor",
         "description": ".Net Core ve C# kullanarak web uygulamaları geliştirme.",
-        "technologies": ["C#", ".Net Core", "MongoDB", "AWS"]
+        "technologies": ["C#", "MSSQL", ".NET Core MVC", ".NET Core Web API", "AWS"]
       },
       {
         "title": "Stajyer",
         "company": "San TSG",
         "date": "Şubat 2023 - Haziran 2023",
         "description": "Web uygulamaları geliştirme, kullanıcı arayüzü tasarımı ve implementasyonu, veritabanı yönetimi konularında pratik deneyim",
-        "technologies": ["React", "JavaScript", "HTML", "CSS", "Node.js"]
+        "technologies": ["React", "JavaScript", "HTML", "CSS", ".NET Core Web API", "PostgreSQL"]
       }
     ]
   },
