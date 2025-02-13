@@ -138,9 +138,20 @@
 .projects-section h2 {
   color: #87CEEB;
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   text-align: left;
   width: 100%;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Başlığın yanına dekoratif element ekleyelim */
+.projects-section h2::before {
+  content: '//';
+  font-size: 1.8rem;
+  color: rgba(135, 206, 235, 0.5);
+  font-weight: 300;
 }
 
 .project-info-tags {
@@ -234,8 +245,12 @@
   }
 
   .projects-section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 0.75rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .projects-section h2::before {
+    font-size: 1.4rem;
   }
 
   .project-info-tags {
