@@ -6,7 +6,7 @@ function Experiance() {
   const { t } = useTranslation();
 
   return (
-    <div id="experience" className="experiance">
+    <div id="experiance" className="experiance">
       <h1>{t('experience.title')}</h1>
       <div className="timeline">
         <div className="timeline-line"></div>
