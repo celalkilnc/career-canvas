@@ -8,26 +8,20 @@ function Switchbar() {
   const [activePage, setActivePage] = useState('information');
 
   useEffect(() => {
-    let timeoutId;
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          if (timeoutId) clearTimeout(timeoutId);
-          
-          timeoutId = setTimeout(() => {
-            // Görünürlük eşiğini düşürdük
-            if (entry.intersectionRatio >= 0.2) {
-              console.log('Active section:', entry.target.id); // Debug için
-              setActivePage(entry.target.id);
-            }
-          }, 50); // Gecikmeyi azalttık
-        }
-      });
+      // En yüksek kesişim oranına sahip bölümü bul
+      const visibleSection = entries.reduce((max, entry) => {
+        return (entry.intersectionRatio > (max?.intersectionRatio || 0))
+          ? entry
+          : max;
+      }, null);
+
+      if (visibleSection && visibleSection.intersectionRatio > 0.2) {
+        setActivePage(visibleSection.target.id);
+      }
     }, {
-      // Daha sık kontrol için threshold değerlerini artırdık
-      threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
-      // Gözlem alanını genişlettik
-      rootMargin: '-10% 0px -10% 0px'
+      threshold: [0, 0.2, 0.4, 0.6, 0.8, 1.0],
+      rootMargin: '-20% 0px -20% 0px'
     });
 
     const sections = ['information', 'experiance', 'education', 'projects'];
@@ -35,12 +29,10 @@ function Switchbar() {
       const element = document.getElementById(sectionId);
       if (element) {
         observer.observe(element);
-        console.log('Observing:', sectionId); // Debug için
       }
     });
 
     return () => {
-      if (timeoutId) clearTimeout(timeoutId);
       sections.forEach(sectionId => {
         const element = document.getElementById(sectionId);
         if (element) {

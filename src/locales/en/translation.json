@@ -12,7 +12,9 @@
     "emailValue": "celalkilnc@gmail.com",
     "location": "Location",
     "locationValue": "Antalya, Turkey",
-    "aboutMe": "I am a passionate developer who is open to continuous learning in software development. Experienced in modern web technologies with strong problem-solving skills..."
+    "aboutMe": "I am a passionate developer who is open to continuous learning in software development. Experienced in modern web technologies with strong problem-solving skills...",
+    "education": "Education",
+    "educationStatus": "Bachelor's - Ongoing"
   },
   "experience": {
     "title": "Experience",
@@ -58,54 +60,87 @@
   },
   "projects": {
     "title": "Projects",
-    "myProjects": "My Projects",
-    "contributedProjects": "Contributed Projects",
+    "myProjects": "Personal",
+    "contributedProjects": "Corporate",
     "viewProject": "Demo",
+    "development_types": {
+      "developed": "Developed",
+      "contributed": "Contributed",
+      "team": "Team Project"
+    },
     "items": {
       "personal": [
         {
           "title": "Chopin, Instrument Store",
           "description": "Chopin consists of an API and a client, and it is continuously being developed. It is an e-commerce site for musical instrument sales. The API is built with .NET Core, and the client side is created with React.",
           "technologies": ["React", ".NET Core", "MSSQL"],
-          "company": null
+          "company": null,
+          "development_type": "developed"
         },
         {
           "title": "Chat App",
           "description": "I developed a messaging application in Windows Form for chatting with friends, utilizing RabbitMQ for communication.",
           "technologies": ["Windows Form", "RabbitMQ", "C#"],
-          "company": null
-        },
+          "company": null,
+          "development_type": "developed"
+        }
+      ],
+      "contributed": [
         {
           "title": "Test Monitor",
           "description": "A project I developed for Etihad, featuring customizable endpoints that regularly send requests and log them. The project is divided into API and Client sides. The API was built using .NET Core with PostgreSQL as the database. The Client side was developed with React and Tailwind was used for styling.",
           "technologies": ["React", "Tailwind", ".NET Core", "PostgreSQL"],
-          "company": "San TSG"
+          "company": "San TSG",
+          "development_type": "developed"
         },
         {
           "title": "Doc.Client",
           "description": "Developed a Postman-like site where API endpoints of connected services can be tested with JSON requests. The application was built with React, and Bootstrap was used for the design.",
           "technologies": ["React", "Bootstrap"],
-          "company": "San TSG"
+          "company": "San TSG",
+          "development_type": "developed"
         },
         {
           "title": "Reservation API",
           "description": "Developed an API application for hotel search and reservation, built using .NET Core.",
           "technologies": [".NET Core"],
-          "company": "San TSG"
-        }
-      ],
-      "contributed": [
+          "company": "San TSG",
+          "development_type": "developed"
+        },
         {
           "title": "TourVisio API",
           "description": "I contributed to bug fixing and feature development in the API project. I worked on the payment system, resolving payment-related bugs and integrating with banking systems.",
           "technologies": ["C#", ".NET Core Web API", "MSSQL", "Payment Integration", "Banking APIs"],
-          "company": "San TSG"
+          "company": "San TSG",
+          "development_type": "contributed"
         },
         {
           "title": "B2B",
           "description": "A client integrated with an API project built using .NET Core MVC.",
           "technologies": ["C#", ".NET Core MVC", "MSSQL", "TypeScript", "Bootstrap"],
-          "company": "San TSG"
+          "company": "San TSG",
+          "development_type": "contributed"
+        },
+        {
+          "title": "Media",
+          "description": "A .NET Core application developed for media file management.",
+          "technologies": [".NET Core"],
+          "company": "San TSG",
+          "development_type": "contributed"
+        },
+        {
+          "title": "Womom",
+          "description": "A frontend application developed for maternity education. Built as a Progressive Web App (PWA) using React.",
+          "technologies": ["React", "PWA", "JavaScript"],
+          "company": "San TSG",
+          "development_type": "developed"
+        },
+        {
+          "title": "SanCC",
+          "description": "A .NET Core application that triggers scheduled tasks. Accounting integration was implemented.",
+          "technologies": [".NET Core", "Scheduled Tasks", "Accounting Integration"],
+          "company": "San TSG",
+          "development_type": "contributed"
         }
       ]
     }

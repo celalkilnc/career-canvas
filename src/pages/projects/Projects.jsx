@@ -20,9 +20,18 @@ function Projects() {
       </div>
       <div className="project-info">
         <h3>{project.title}</h3>
-        {project.company && (
-          <span className="project-company">{project.company}</span>
-        )}
+        <div className="project-info-tags">
+          {project.company && (
+            <span className="project-company">{project.company}</span>
+          )}
+          {project.development_type && (
+            <span className="project-type">
+              <span data-type={project.development_type}>
+                {t(`projects.development_types.${project.development_type}`)}
+              </span>
+            </span>
+          )}
+        </div>
         <p>{project.description}</p>
         <div className="project-tech">
           {project.technologies.map((tech, i) => (
