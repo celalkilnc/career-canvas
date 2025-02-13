@@ -7,18 +7,26 @@ function Projects() {
 
   const ProjectCard = ({ project }) => (
     <div className="project-card">
-      <div className="project-image">
-        <img src={project.image} alt={project.title} />
-        <div className="project-links">
-          <a href={project.links?.github} target="_blank" rel="noopener noreferrer">
-            GitHub
-          </a>
-          <a href={project.links?.live} target="_blank" rel="noopener noreferrer">
-            {t('projects.viewProject')}
-          </a>
+      {project.image && (
+        <div className="project-image">
+          <img src={project.image} alt={project.title} />
+          {(project.links?.github || project.links?.live) && (
+            <div className="project-links">
+              {project.links?.github && (
+                <a href={project.links.github} target="_blank" rel="noopener noreferrer">
+                  GitHub
+                </a>
+              )}
+              {project.links?.live && (
+                <a href={project.links.live} target="_blank" rel="noopener noreferrer">
+                  {t('projects.viewProject')}
+                </a>
+              )}
+            </div>
+          )}
         </div>
-      </div>
-      <div className="project-info">
+      )}
+      <div className={`project-info ${!project.image ? 'no-image' : ''}`}>
         <h3>{project.title}</h3>
         <div className="project-info-tags">
           {project.company && (

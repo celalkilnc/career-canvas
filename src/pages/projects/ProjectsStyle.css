@@ -31,6 +31,8 @@
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
   background-color: rgba(30, 41, 59, 0.5);
   border-radius: 12px;
   overflow: hidden;
@@ -184,6 +186,24 @@
 .project-type:has([data-type="team"]) {
   color: #DDA0DD; /* açık mor */
   border-color: rgba(221, 160, 221, 0.3);
+}
+
+.project-info.no-image {
+  padding-top: 2rem; /* Resim olmadığında üst padding'i artır */
+}
+
+/* Resim olmadığında project-links'i gizle */
+.project-links:empty {
+  display: none;
+}
+
+/* Linkler olmadığında hover efektini kaldır */
+.project-card:not(:has(.project-links)) .project-image img {
+  transform: none;
+}
+
+.project-card:not(:has(.project-links)):hover .project-image img {
+  transform: none;
 }
 
 @media (max-width: 768px) {
