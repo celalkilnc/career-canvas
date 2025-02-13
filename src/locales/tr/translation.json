@@ -66,11 +66,18 @@
     "viewProject": "Demo",
     "development_types": {
       "developed": "Geliştirdim",
+      "developing": "Geliştiriliyor",
       "contributed": "Katkıda Bulundum",
       "team": "Takım Projesi"
     },
     "items": {
       "personal": [
+        {
+          "title": "Finance Assistant",
+          "description": "Kişisel finans yönetimi için geliştirilmiş bir .NET Core uygulaması. Kullanıcıların gelir ve giderlerini takip etmelerine yardımcı olur.",
+          "technologies": [".NET Core", "Entity Framework", "SQL Server"],
+          "development_type": "developing"
+        },
         {
           "title": "Chopin, Instrument Store",
           "description": "Chopin, API ve client taraflarından oluşan, sürekli geliştirilmekte olan bir müzik aleti satış e-ticaret sitesidir. API .NET Core ile, client tarafı React ile oluşturulmuştur.",

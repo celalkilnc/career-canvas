@@ -190,6 +190,11 @@
   border-color: rgba(152, 251, 152, 0.3);
 }
 
+.project-type:has([data-type="developing"]) {  /* Yeni eklenen stil */
+  color: #FFD700; /* altın sarısı */
+  border-color: rgba(255, 215, 0, 0.3);
+}
+
 .project-type:has([data-type="contributed"]) {
   color: #FFA07A; /* açık turuncu */
   border-color: rgba(255, 160, 122, 0.3);

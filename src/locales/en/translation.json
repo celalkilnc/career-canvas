@@ -65,11 +65,18 @@
     "viewProject": "Demo",
     "development_types": {
       "developed": "Developed",
+      "developing": "Developing",
       "contributed": "Contributed",
       "team": "Team Project"
     },
     "items": {
       "personal": [
+        {
+          "title": "Finance Assistant",
+          "description": "A .NET Core application developed for personal finance management. Helps users track their expenses and income.",
+          "technologies": [".NET Core", "Entity Framework", "SQL Server"],
+          "development_type": "developing"
+        },
         {
           "title": "Chopin, Instrument Store",
           "description": "Chopin consists of an API and a client, and it is continuously being developed. It is an e-commerce site for musical instrument sales. The API is built with .NET Core, and the client side is created with React.",
