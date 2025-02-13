@@ -58,21 +58,15 @@
   },
   "projects": {
     "title": "Projects",
-    "viewProject": "View Project",
+    "viewProject": "Demo",
     "items": [
       {
-        "title": "Personal Portfolio",
-        "description": "Personal portfolio website developed using React and modern web technologies",
-        "technologies": ["React", "Vite", "CSS3", "i18next"],
-        "link": "https://github.com/username/portfolio",
-        "status": "In Progress"
+        "title": "Career Canvas",
+        "description": "Personal portfolio website. Developed using React and modern web technologies."
       },
       {
-        "title": "Career Canvas",
-        "description": "Web application for visualizing career development and experiences",
-        "technologies": ["React", "Node.js", "MongoDB", "Express"],
-        "link": "https://github.com/username/career-canvas",
-        "status": "Completed"
+        "title": "E-Commerce Platform",
+        "description": "Full-featured e-commerce solution. User management, product catalog, and payment system integration."
       }
     ]
   },

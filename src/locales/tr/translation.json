@@ -58,21 +58,15 @@
   },
   "projects": {
     "title": "Projeler",
-    "viewProject": "Projeyi Görüntüle",
+    "viewProject": "Demo",
     "items": [
       {
-        "title": "Kişisel Portfolio",
-        "description": "React ve modern web teknolojileri kullanılarak geliştirilmiş kişisel portfolio sitesi",
-        "technologies": ["React", "Vite", "CSS3", "i18next"],
-        "link": "https://github.com/username/portfolio",
-        "status": "Devam Ediyor"
+        "title": "Career Canvas",
+        "description": "Kişisel portfolio web sitesi. React ve modern web teknolojileri kullanılarak geliştirildi."
       },
       {
-        "title": "Career Canvas",
-        "description": "Kariyer gelişimi ve deneyimleri görselleştirmeye yönelik web uygulaması",
-        "technologies": ["React", "Node.js", "MongoDB", "Express"],
-        "link": "https://github.com/username/career-canvas",
-        "status": "Tamamlandı"
+        "title": "E-Ticaret Platformu",
+        "description": "Tam kapsamlı e-ticaret çözümü. Kullanıcı yönetimi, ürün kataloğu ve ödeme sistemi entegrasyonu."
       }
     ]
   },
