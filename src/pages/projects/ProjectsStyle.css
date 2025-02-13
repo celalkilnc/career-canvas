@@ -131,13 +131,14 @@
 }
 
 .projects-section {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  min-height: 30vh;
 }
 
 .projects-section h2 {
   color: #87CEEB;
   font-size: 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   text-align: left;
   width: 100%;
 }
@@ -229,12 +230,12 @@
   }
 
   .projects-section {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
   }
 
   .projects-section h2 {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
   }
 
   .project-info-tags {
