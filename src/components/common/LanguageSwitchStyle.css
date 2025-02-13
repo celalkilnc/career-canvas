@@ -1,40 +1,53 @@
-.language-switch {
+.language-switch-container {
   position: fixed;
   top: 2rem;
   right: 2rem;
   display: flex;
   gap: 0.5rem;
-  background: rgba(36, 36, 36, 0.95);
+  z-index: 1000;
+  background: rgba(10, 22, 38, 0.8);
   padding: 0.5rem;
-  border-radius: 8px;
+  border-radius: 12px;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  z-index: 1000;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.lang-btn {
-  background: transparent;
-  border: none;
-  color: rgba(255, 255, 255, 0.7);
-  padding: 0.5rem 0.75rem;
+.language-button {
+  background: rgba(30, 41, 59, 0.5);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
   cursor: pointer;
-  border-radius: 6px;
+  font-size: 0.9rem;
   transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  min-width: 45px;
+  text-align: center;
 }
 
-.lang-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
+.language-button:hover {
+  background: rgba(135, 206, 235, 0.2);
+  transform: translateY(-2px);
 }
 
-.lang-btn.active {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
+.language-button.active {
+  background: rgba(135, 206, 235, 0.3);
+  border-color: rgba(135, 206, 235, 0.5);
+  box-shadow: 0 0 10px rgba(135, 206, 235, 0.2);
 }
 
 @media (max-width: 768px) {
-  .language-switch {
+  .language-switch-container {
     top: 1rem;
     right: 1rem;
+    padding: 0.4rem;
+  }
+
+  .language-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    min-width: 40px;
   }
 } 
