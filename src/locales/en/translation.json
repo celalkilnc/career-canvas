@@ -58,17 +58,63 @@
   },
   "projects": {
     "title": "Projects",
+    "myProjects": "My Projects",
+    "contributedProjects": "Contributed Projects",
     "viewProject": "Demo",
-    "items": [
-      {
-        "title": "Career Canvas",
-        "description": "Personal portfolio website. Developed using React and modern web technologies."
-      },
-      {
-        "title": "E-Commerce Platform",
-        "description": "Full-featured e-commerce solution. User management, product catalog, and payment system integration."
-      }
-    ]
+    "items": {
+      "personal": [
+        {
+          "title": "Chopin, Instrument Store",
+          "description": "Chopin consists of an API and a client, and it is continuously being developed. It is an e-commerce site for musical instrument sales. The API is built with .NET Core, and the client side is created with React.",
+          "technologies": ["React", ".NET Core", "MSSQL"],
+          "company": null
+        },
+        {
+          "title": "Chat App",
+          "description": "I developed a messaging application in Windows Form for chatting with friends, utilizing RabbitMQ for communication.",
+          "technologies": ["Windows Form", "RabbitMQ", "C#"],
+          "company": null
+        },
+        {
+          "title": "Career Canvas",
+          "description": "Personal portfolio website. Developed using React and modern web technologies.",
+          "technologies": ["React", "JavaScript", "i18next"],
+          "company": null
+        },
+        {
+          "title": "Test Monitor",
+          "description": "A project I developed for Etihad, featuring customizable endpoints that regularly send requests and log them. The project is divided into API and Client sides. The API was built using .NET Core with PostgreSQL as the database. The Client side was developed with React and Tailwind was used for styling.",
+          "technologies": ["React", "Tailwind", ".NET Core", "PostgreSQL"],
+          "company": "San TSG"
+        },
+        {
+          "title": "Doc.Client",
+          "description": "Developed a Postman-like site where API endpoints of connected services can be tested with JSON requests. The application was built with React, and Bootstrap was used for the design.",
+          "technologies": ["React", "Bootstrap"],
+          "company": "San TSG"
+        },
+        {
+          "title": "Reservation API",
+          "description": "Developed an API application for hotel search and reservation, built using .NET Core.",
+          "technologies": [".NET Core"],
+          "company": "San TSG"
+        }
+      ],
+      "contributed": [
+        {
+          "title": "TourVisio API",
+          "description": "I contributed to bug fixing and feature development in the API project. I worked on the payment system, resolving payment-related bugs and integrating with banking systems.",
+          "technologies": ["C#", ".NET Core Web API", "MSSQL", "Payment Integration", "Banking APIs"],
+          "company": "San TSG"
+        },
+        {
+          "title": "B2B",
+          "description": "A client integrated with an API project built using .NET Core MVC.",
+          "technologies": ["C#", ".NET Core MVC", "MSSQL", "TypeScript", "Bootstrap"],
+          "company": "San TSG"
+        }
+      ]
+    }
   },
   "common": {
     "technologies": "Technologies Used",

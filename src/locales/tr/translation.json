@@ -58,17 +58,63 @@
   },
   "projects": {
     "title": "Projeler",
+    "myProjects": "Yazdıklarım",
+    "contributedProjects": "Bulunduklarım",
     "viewProject": "Demo",
-    "items": [
-      {
-        "title": "Career Canvas",
-        "description": "Kişisel portfolio web sitesi. React ve modern web teknolojileri kullanılarak geliştirildi."
-      },
-      {
-        "title": "E-Ticaret Platformu",
-        "description": "Tam kapsamlı e-ticaret çözümü. Kullanıcı yönetimi, ürün kataloğu ve ödeme sistemi entegrasyonu."
-      }
-    ]
+    "items": {
+      "personal": [
+        {
+          "title": "Chopin, Instrument Store",
+          "description": "Chopin, API ve client taraflarından oluşan, sürekli geliştirilmekte olan bir müzik aleti satış e-ticaret sitesidir. API .NET Core ile, client tarafı React ile oluşturulmuştur.",
+          "technologies": ["React", ".NET Core", "MSSQL"],
+          "company": null
+        },
+        {
+          "title": "Chat App",
+          "description": "Arkadaşlarla sohbet etmek için Windows Form'da geliştirdiğim, iletişim için RabbitMQ kullanan bir mesajlaşma uygulaması.",
+          "technologies": ["Windows Form", "RabbitMQ", "C#"],
+          "company": null
+        },
+        {
+          "title": "Career Canvas",
+          "description": "Kişisel portfolio web sitesi. React ve modern web teknolojileri kullanılarak geliştirildi.",
+          "technologies": ["React", "JavaScript", "i18next"],
+          "company": null
+        },
+        {
+          "title": "Test Monitor",
+          "description": "Etihad için geliştirdiğim, özelleştirilebilir endpoint'leri düzenli olarak kontrol eden ve loglarını tutan bir proje. Proje API ve Client taraflarına ayrılmıştır. API tarafı .NET Core ile PostgreSQL veritabanı kullanılarak, Client tarafı React ve Tailwind ile geliştirilmiştir.",
+          "technologies": ["React", "Tailwind", ".NET Core", "PostgreSQL"],
+          "company": "San TSG"
+        },
+        {
+          "title": "Doc.Client",
+          "description": "Bağlı servislerin API endpoint'lerinin JSON istekleriyle test edilebildiği Postman benzeri bir site geliştirdim. Uygulama React ile geliştirildi ve tasarım için Bootstrap kullanıldı.",
+          "technologies": ["React", "Bootstrap"],
+          "company": "San TSG"
+        },
+        {
+          "title": "Reservation API",
+          "description": "Otel arama ve rezervasyon için .NET Core kullanılarak geliştirilmiş bir API uygulaması.",
+          "technologies": [".NET Core"],
+          "company": "San TSG"
+        }
+      ],
+      "contributed": [
+        {
+          "title": "TourVisio API",
+          "description": "API projesinde hata düzeltme ve özellik geliştirme çalışmalarına katkıda bulundum. Ödeme sistemi üzerinde çalıştım, ödeme ile ilgili hataları çözdüm ve banka sistemleri ile entegrasyon sağladım.",
+          "technologies": ["C#", ".NET Core Web API", "MSSQL", "Payment Integration", "Banking APIs"],
+          "company": "San TSG"
+        },
+        {
+          "title": "B2B",
+          "description": ".NET Core MVC kullanılarak oluşturulmuş bir API projesi ile entegre edilmiş bir istemci.",
+          "technologies": ["C#", ".NET Core MVC", "MSSQL", "TypeScript", "Bootstrap"],
+          "company": "San TSG"
+        }
+      ]
+    }
   },
   "common": {
     "technologies": "Kullanılan Teknolojiler",
