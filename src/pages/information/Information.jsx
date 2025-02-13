@@ -35,7 +35,7 @@ function Information() {
       <InteractiveBackground />
       <div className="info-container">
         <div className="profile-section">
-          <h1>Celal KILINÇ</h1>
+          <h1>Celal Kılınç</h1>
           <h2>{t('info.description')}</h2>
         </div>
         
