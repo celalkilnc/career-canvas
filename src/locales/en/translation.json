@@ -8,8 +8,8 @@
   "info": {
     "title": "Title",
     "description": "Software Developer",
-    "fullName": "Full Name",
     "email": "Email",
+    "emailValue": "celalkilnc@gmail.com",
     "location": "Location",
     "locationValue": "Antalya, Turkey",
     "aboutMe": "I am a passionate developer who is open to continuous learning in software development. Experienced in modern web technologies with strong problem-solving skills..."
@@ -73,12 +73,6 @@
           "title": "Chat App",
           "description": "I developed a messaging application in Windows Form for chatting with friends, utilizing RabbitMQ for communication.",
           "technologies": ["Windows Form", "RabbitMQ", "C#"],
-          "company": null
-        },
-        {
-          "title": "Career Canvas",
-          "description": "Personal portfolio website. Developed using React and modern web technologies.",
-          "technologies": ["React", "JavaScript", "i18next"],
           "company": null
         },
         {

@@ -7,8 +7,6 @@ function Information() {
   const { t } = useTranslation();
 
   const personalInfo = [
-    { key: t('info.fullName'), value: "Celal KILINÇ" },
-    { key: t('info.title'), value: t('info.description') },
     { key: t('info.email'), value: "your.email@example.com" },
     { key: t('info.location'), value: t('info.locationValue') },
   ];

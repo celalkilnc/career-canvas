@@ -10,6 +10,7 @@
     "description": "Yazılım Geliştirici",
     "fullName": "Ad Soyad",
     "email": "E-posta",
+    "emailValue": "celalkilnc@gmail.com",
     "location": "Konum",
     "locationValue": "Antalya, Türkiye",
     "aboutMe": "Yazılım geliştirme konusunda tutkulu ve sürekli öğrenmeye açık bir geliştiriciyim. Modern web teknolojileri konusunda deneyimli, problem çözme becerileri güçlü..."
@@ -73,12 +74,6 @@
           "title": "Chat App",
           "description": "Arkadaşlarla sohbet etmek için Windows Form'da geliştirdiğim, iletişim için RabbitMQ kullanan bir mesajlaşma uygulaması.",
           "technologies": ["Windows Form", "RabbitMQ", "C#"],
-          "company": null
-        },
-        {
-          "title": "Career Canvas",
-          "description": "Kişisel portfolio web sitesi. React ve modern web teknolojileri kullanılarak geliştirildi.",
-          "technologies": ["React", "JavaScript", "i18next"],
           "company": null
         },
         {
