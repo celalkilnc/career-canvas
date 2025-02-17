@@ -1,18 +1,18 @@
 import "./App.css";
 import Navbar from "./components/common/switchbar/Switchbar";
 import Home from "./pages/home/Home";
-import RouterIndex from "./router/RouterIndex"; 
 import { useScrollSpy } from "./utils/useScrollSpy";
- 
-
+import LanguageSwitch from './components/common/LanguageSwitch';
+import './i18n';
 
 function App() {
   useScrollSpy();
 
   return (
     <div className="app">
-      <Navbar />
+      <LanguageSwitch />
       <Home />
+      <Navbar />
     </div>
   );
 }

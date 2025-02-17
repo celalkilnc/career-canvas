@@ -1,40 +1,29 @@
-import "./Experiance.css";
-// import React from "react";
+import React from "react";
+import { useTranslation } from 'react-i18next';
+import "./ExperianceStyle.css";
 
-function Experience() {
-  const experiences = [
-    {
-      company: "XYZ Teknoloji",
-      position: "Senior Software Developer",
-      period: "2022 - Devam Ediyor",
-      description: "React ve Node.js kullanarak web uygulamaları geliştirme, takım liderliği ve mentorluk.",
-      technologies: ["React", "Node.js", "MongoDB", "AWS"]
-    },
-    {
-      company: "ABC Yazılım",
-      position: "Full Stack Developer",
-      period: "2020 - 2022",
-      description: "E-ticaret platformları geliştirme, mikroservis mimarisi ile çalışma.",
-      technologies: ["Vue.js", "Python", "PostgreSQL", "Docker"]
-    },
-    // Diğer deneyimlerinizi ekleyebilirsiniz
-  ];
+function Experiance() {
+  const { t } = useTranslation();
 
   return (
-    <div id="experience" className="experience">
-      <div className="experience-container">
-        <h1>Deneyimler</h1>
-        <div className="timeline">
-          {experiences.map((exp, index) => (
-            <div key={index} className="timeline-item">
+    <div id="experiance" className="experiance">
+      <h1>{t('experience.title')}</h1>
+      <div className="timeline">
+        <div className="timeline-line"></div>
+        <div className="timeline-container">
+          {t('experience.jobs', { returnObjects: true }).map((job, index) => (
+            <div key={index} className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}>
+              <div className="timeline-dot"></div>
               <div className="timeline-content">
-                <h3>{exp.company}</h3>
-                <h4>{exp.position}</h4>
-                <span className="period">{exp.period}</span>
-                <p>{exp.description}</p>
+                <h2 className="company-name">{job.company}</h2>
+                <h3 className="job-title">{job.title}</h3>
+                <p className="date">{job.date}</p>
+                <p className="description">{job.description}</p>
                 <div className="technologies">
-                  {exp.technologies.map((tech, i) => (
-                    <span key={i} className="tech-tag">{tech}</span>
+                  {job.technologies.map((tech, techIndex) => (
+                    <span key={techIndex} className="tech-tag">
+                      {tech}
+                    </span>
                   ))}
                 </div>
               </div>
@@ -46,4 +35,4 @@ function Experience() {
   );
 }
 
-export default Experience;
+export default Experiance; 
