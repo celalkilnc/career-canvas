@@ -39,7 +39,7 @@ function Information() {
           <h2>{t('info.description')}</h2>
         </div>
         
-        <div className="about-me">
+        <div className="about-me" >
           <p>{t('info.aboutMe')}</p>
         </div>
 

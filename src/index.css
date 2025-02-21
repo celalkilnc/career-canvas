@@ -35,24 +35,27 @@ body {
 
 /* Genel scrollbar stilleri */
 ::-webkit-scrollbar {
-  position: absolute;
-  width: 8px;
+  width: 10px;
+  background: rgba(10, 22, 38, 0.2);
 }
 
 /* Scroll çubuğu arka plan rengi */
 ::-webkit-scrollbar-track {
-  background: #f5f5f5;
+  background: rgba(10, 22, 38, 0.8);
+  border-radius: 10px;
 }
 
 /* Scroll çubuğu rengi */
 ::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 6px; /* Scroll çubuğu köşe yuvarlama */
+  background: rgba(135, 206, 235, 0.3);
+  border-radius: 10px;
+  border: 2px solid rgba(10, 22, 38, 0.8);
+  transition: all 0.3s ease;
 }
 
 /* Zamanla kaybolduğunda scroll çubuğu stil */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: rgba(135, 206, 235, 0.5);
 }
 
 /* Scroll çubuğu üzerine gelindiğinde kalınlaşma */
@@ -85,6 +88,8 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(135, 206, 235, 0.3) rgba(10, 22, 38, 0.8);
 }
 
 img {
@@ -123,5 +128,16 @@ img {
 @media (min-width: 1280px) {
   .container {
     max-width: 1280px;
+  }
+}
+
+/* Mobil için daha ince scrollbar */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-width: 1px;
   }
 }
