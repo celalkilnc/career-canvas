@@ -1,5 +1,5 @@
 .section {
-  min-height: 100vh;
+  min-height: none !important;
   display: flex;
   flex-direction: column;
   justify-content: center;

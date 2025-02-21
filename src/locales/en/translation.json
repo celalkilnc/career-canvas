@@ -3,7 +3,8 @@
     "information": "Information",
     "experience": "Experience",
     "education": "Education",
-    "projects": "Projects"
+    "projects": "Projects",
+    "skills": "Skills"
   },
   "info": {
     "title": "Title",
@@ -157,5 +158,50 @@
     "viewMore": "View More",
     "date": "Date",
     "present": "Present"
+  },
+  "skills": {
+    "title": "Skills",
+    "items": [
+      {
+        "name": "React",
+        "icon": "react",
+        "level": "Intermediate"
+      },
+      {
+        "name": ".NET Core",
+        "icon": "dotnet",
+        "level": "Advanced"
+      },
+      {
+        "name": "JavaScript",
+        "icon": "javascript",
+        "level": "Intermediate"
+      },
+      {
+        "name": "C#",
+        "icon": "csharp",
+        "level": "Advanced"
+      },
+      {
+        "name": "TypeScript",
+        "icon": "typescript",
+        "level": "Intermediate"
+      },
+      {
+        "name": "Python",
+        "icon": "python",
+        "level": "Intermediate"
+      },
+      {
+        "name": "Git",
+        "icon": "git",
+        "level": "Advanced"
+      },
+      {
+        "name": "Postman",
+        "icon": "postman",
+        "level": "Intermediate"
+      }
+    ]
   }
 } 

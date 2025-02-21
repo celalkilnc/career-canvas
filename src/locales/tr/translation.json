@@ -3,7 +3,8 @@
     "information": "Bilgi",
     "experience": "Deneyim",
     "education": "Eğitim",
-    "projects": "Projeler"
+    "projects": "Projeler",
+    "skills": "Yetenekler"
   },
   "info": {
     "title": "Ünvan",
@@ -158,5 +159,50 @@
     "viewMore": "Daha Fazla",
     "date": "Tarih",
     "present": "Günümüz"
+  },
+  "skills": {
+    "title": "Yetenekler",
+    "items": [
+      {
+        "name": "React",
+        "icon": "react",
+        "level": "Orta Seviye"
+      },
+      {
+        "name": ".NET Core",
+        "icon": "dotnet",
+        "level": "İleri Seviye"
+      },
+      {
+        "name": "JavaScript",
+        "icon": "javascript",
+        "level": "Orta Seviye"
+      },
+      {
+        "name": "C#",
+        "icon": "csharp",
+        "level": "İleri Seviye"
+      },
+      {
+        "name": "TypeScript",
+        "icon": "typescript",
+        "level": "Orta Seviye"
+      },
+      {
+        "name": "Python",
+        "icon": "python",
+        "level": "Orta Seviye"
+      },
+      {
+        "name": "Git",
+        "icon": "git",
+        "level": "İleri Seviye"
+      },
+      {
+        "name": "Postman",
+        "icon": "postman",
+        "level": "Orta Seviye"
+      }
+    ]
   }
 } 
