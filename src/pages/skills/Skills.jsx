@@ -11,11 +11,16 @@ import {
   DiDotnet,
   DiJavascript1,
   DiCssdeck,
+  DiPostgresql,
+  DiMsqlServer,
 } from 'react-icons/di';
 import { 
   TbBrandTypescript,
 } from 'react-icons/tb';
-import { SiPostman } from 'react-icons/si';
+import { 
+  SiPostman,
+  SiDotnet,
+} from 'react-icons/si';
 
 const iconMap = {
   react: FaReact,
@@ -26,24 +31,33 @@ const iconMap = {
   git: FaGitAlt,
   python: FaPython,
   docker: FaDocker,
-  postman: SiPostman
+  postman: SiPostman,
+  mssql: DiMsqlServer,
+  postgresql: DiPostgresql,
+  efcore: SiDotnet,
+  hangfire: SiDotnet,
+  mediatr: SiDotnet,
 };
 
 function Skills() {
   const { t } = useTranslation();
 
   // Skill türlerini belirleme
-  const isToolType = (skillName) => {
-    const tools = ['Git', 'Postman'];
-    return tools.includes(skillName);
+  const getSkillType = (skillName) => {
+    const tools = ['Git', 'Postman', 'MSSQL', 'PostgreSQL'];
+    const libraries = ['EF Core', 'Hangfire', 'MediatR'];
+    
+    if (tools.includes(skillName)) return 'tool';
+    if (libraries.includes(skillName)) return 'library';
+    return 'tech';
   };
 
   const SkillCard = ({ skill }) => {
     const Icon = iconMap[skill.icon];
-    const isToolSkill = isToolType(skill.name);
+    const skillType = getSkillType(skill.name);
     
     return (
-      <div className={`skill-card ${isToolSkill ? 'tool-skill' : 'tech-skill'}`}>
+      <div className={`skill-card ${skillType}-skill`}>
         {Icon && <Icon className="skill-icon" />}
         <div className="skill-info">
           <h3>{skill.name}</h3>

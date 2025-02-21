@@ -201,6 +201,31 @@
         "name": "Postman",
         "icon": "postman",
         "level": "Intermediate"
+      },
+      {
+        "name": "MSSQL",
+        "icon": "mssql",
+        "level": "Advanced"
+      },
+      {
+        "name": "PostgreSQL",
+        "icon": "postgresql",
+        "level": "Intermediate"
+      },
+      {
+        "name": "EF Core",
+        "icon": "efcore",
+        "level": "Advanced"
+      },
+      {
+        "name": "Hangfire",
+        "icon": "hangfire",
+        "level": "Advanced"
+      },
+      {
+        "name": "MediatR",
+        "icon": "mediatr",
+        "level": "Advanced"
       }
     ]
   }

@@ -121,6 +121,20 @@
   color: #FF8C00;
 }
 
+/* Kütüphane kartları için stil (mor tema) */
+.library-skill {
+  border: 1px solid rgba(147, 112, 219, 0.3);
+}
+
+.library-skill:hover {
+  border-color: rgba(147, 112, 219, 0.5);
+  box-shadow: 0 4px 15px rgba(147, 112, 219, 0.1);
+}
+
+.library-skill .skill-icon {
+  color: #9370DB;
+}
+
 /* Eski section-based stilleri kaldır */
 .skills-section:first-of-type .skill-card,
 .skills-section:last-of-type .skill-card,
