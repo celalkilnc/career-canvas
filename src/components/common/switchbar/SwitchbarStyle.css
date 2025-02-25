@@ -10,54 +10,141 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background-color: rgba(10, 22, 38, 0.8);
-  padding: 1.5rem 0.5rem;
-  border-radius: 25px;
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1.2rem 0.6rem;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.1);
   list-style: none;
 }
 
 .switch-item {
   cursor: pointer;
   padding: 0.25rem;
-  transition: all 0.3s ease;
+  position: relative;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.switch-item:hover {
+  opacity: 1;
+}
+
+/* Tooltip için yeni stil */
+.switch-item::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  right: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Tooltip ok işareti */
+.switch-item::after {
+  content: '';
+  position: absolute;
+  right: calc(100% + 4px);
+  top: 50%;
+  transform: translateY(-50%);
+  border: 6px solid transparent;
+  border-left-color: rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.switch-item:hover::before,
+.switch-item:hover::after {
+  opacity: 1;
+  visibility: visible;
 }
 
 .switch-dot {
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.3);
-  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.switch-dot::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  left: -1px;
+  top: -1px;
+  transition: border-color 0.2s ease;
 }
 
 .switch-dot:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-  transform: scale(1.2);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .switch-dot.active {
-  background-color: #87CEEB;
-  box-shadow: 0 0 10px rgba(135, 206, 235, 0.5);
+  background-color: #ffffff;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.switch-dot.active::after {
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 @media (max-width: 768px) {
   .switchbar {
     right: auto;
     top: auto;
-    bottom: 2rem;
+    bottom: 1.5rem;
     left: 50%;
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
   }
 
   .switchBar {
     flex-direction: row;
-    padding: 0.5rem 1rem; 
+    padding: 0.6rem 1rem;
+    gap: 1.2rem;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2);
   }
 
   .switch-dot {
-    width: 10px;
-    height: 10px;
+    width: 6px;
+    height: 6px;
+  }
+
+  /* Mobilde tooltip pozisyonu */
+  .switch-item::before {
+    right: 50%;
+    top: auto;
+    bottom: calc(100% + 10px);
+    transform: translateX(50%);
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  .switch-item::after {
+    right: 50%;
+    top: auto;
+    bottom: calc(100% + 4px);
+    transform: translateX(50%) rotate(90deg);
+    border-left-color: rgba(255, 255, 255, 0.25);
   }
 }
 

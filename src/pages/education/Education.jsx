@@ -1,53 +1,68 @@
-import React from "react";
-import "./EducationStyle.css";
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { FaCalendarAlt } from 'react-icons/fa';
+import './EducationStyle.css';
 
 function Education() {
   const { t } = useTranslation();
 
+  useEffect(() => {
+    const cards = document.querySelectorAll('.education-card');
+    
+    const handleMouseMove = (e, card) => {
+      const rect = card.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / card.offsetWidth) * 100;
+      const y = ((e.clientY - rect.top) / card.offsetHeight) * 100;
+      
+      card.style.setProperty('--mouse-x', `${x}%`);
+      card.style.setProperty('--mouse-y', `${y}%`);
+    };
+
+    cards.forEach(card => {
+      card.addEventListener('mousemove', (e) => handleMouseMove(e, card));
+    });
+
+    return () => {
+      cards.forEach(card => {
+        card.removeEventListener('mousemove', (e) => handleMouseMove(e, card));
+      });
+    };
+  }, []);
+
   const educations = [
     {
-      school: t('education.university.name'),
-      degree: t('education.university.department'),
-      period: t('education.university.date'),
-      gpa: "3.08",
-      description: t('education.university.description'),
-      achievements: t('education.university.courses', { returnObjects: true })
+      schoolName: t('education.university2.name', "Anadolu University"),
+      degree: t('education.university2.department', "Management Information Systems"),
+      date: t('education.university2.date', "2024 - Present")
     },
     {
-      school: t('education.university2.name'),
-      degree: t('education.university2.department'),
-      period: t('education.university2.date'),
-      description: t('education.university2.description'),
-      achievements: t('education.university2.courses', { returnObjects: true })
+      schoolName: t('education.university.name', "Pamukkale University"),
+      degree: t('education.university.department', "Computer Programming"),
+      date: t('education.university.date', "2021 - 2023")
     }
   ];
 
   return (
     <div id="education" className="education">
       <div className="education-container">
-        <h1>{t('education.title')}</h1>
+        <h1>{t('education.title', 'Education')}</h1>
         <div className="education-grid">
           {educations.map((edu, index) => (
-            <div key={index} className="education-card">
-              <div className="edu-header">
-                <h2>{edu.school}</h2>
-                <span className="period">{edu.period}</span>
-              </div>
-              <h3>{edu.degree}</h3>
-              {edu.gpa && (
-                <div className="gpa">
-                  <span>GPA: {edu.gpa}</span>
+            <div 
+              key={index} 
+              className="education-card"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+            >
+              <div className="education-card-content">
+                <h2 className="school-name">{edu.schoolName}</h2>
+                <h3 className="degree">{edu.degree}</h3>
+                <div className="education-date">
+                  <FaCalendarAlt className="date-icon" />
+                  <span>{edu.date}</span>
                 </div>
-              )}
-          {/*     <div className="achievements">
-                <h4>{t('education.achievements')}:</h4>
-                <ul>
-                  {edu.achievements.map((achievement, i) => (
-                    <li key={i}>{achievement}</li>
-                  ))}
-                </ul>
-              </div> */}
+              </div>
+              <div className="education-glow"></div>
             </div>
           ))}
         </div>

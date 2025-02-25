@@ -221,11 +221,6 @@
         "name": "Hangfire",
         "icon": "hangfire",
         "level": "Advanced"
-      },
-      {
-        "name": "MediatR",
-        "icon": "mediatr",
-        "level": "Advanced"
       }
     ]
   }

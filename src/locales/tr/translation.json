@@ -222,11 +222,6 @@
         "name": "Hangfire",
         "icon": "hangfire",
         "level": "İleri Seviye"
-      },
-      {
-        "name": "MediatR",
-        "icon": "mediatr",
-        "level": "İleri Seviye"
       }
     ]
   }

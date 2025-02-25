@@ -29,36 +29,22 @@ function Experiance() {
     };
   }, []);
 
-  const jobs = [
-    {
-      title: t('experience.jobs.0.title', 'Backend Developer'),
-      company: t('experience.jobs.0.company', 'San TSG'),
-      date: t('experience.jobs.0.date', 'July 2023 - Present'),
-      description: t('experience.jobs.0.description', 'Developing web applications using .Net Core and C#.'),
-      technologies: ['C#', 'MSSQL', '.NET Core MVC', '.NET Core Web API', 'AWS']
-    },
-    {
-      title: t('experience.jobs.1.title', 'Intern'),
-      company: t('experience.jobs.1.company', 'San TSG'),
-      date: t('experience.jobs.1.date', 'February 2023 - June 2023'),
-      description: t('experience.jobs.1.description', 'Gained practical experience in web application development, user interface design and implementation, database management'),
-      technologies: ['React', 'JavaScript', 'HTML', 'CSS', '.NET Core Web API', 'PostgreSQL']
-    }
-  ];
-
   return (
     <div id="experiance" className="experiance">
       <div className="experiance-container">
-        <h1>{t('experience.title', 'Experience')}</h1>
+        <h1>{t('experiance.title')}</h1>
         <div className="experiance-grid">
-          {jobs.map((job, index) => (
+          {t('experiance.jobs', { returnObjects: true }).map((job, index) => (
             <div 
               key={index} 
               className="experiance-card"
-              data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+              data-aos="fade-up"
               data-aos-delay={index * 100}
             >
               <div className="experiance-card-content">
+                {job.date.includes(t('experiance.current')) && (
+                  <div className="current-job">{t('experiance.current')}</div>
+                )}
                 <h2 className="job-title">{job.title}</h2>
                 <h3 className="company-name">{job.company}</h3>
                 <div className="job-date">

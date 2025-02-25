@@ -1,53 +1,100 @@
+.language-switch-wrapper {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
 .language-switch-container {
   position: fixed;
-  top: 2rem;
-  right: 2rem;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
   display: flex;
-  gap: 0.5rem;
-  z-index: 1000;
-  background: rgba(10, 22, 38, 0.8);
-  padding: 0.5rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--card-border);
   border-radius: 12px;
+  padding: 4px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(110, 86, 207, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.language-button {
-  background: rgba(30, 41, 59, 0.5);
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-  min-width: 45px;
-  text-align: center;
-}
-
-.language-button:hover {
-  background: rgba(135, 206, 235, 0.2);
+.language-switch-container:hover {
+  border-color: var(--accent-primary);
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.2),
+    0 0 0 1px var(--accent-primary),
+    0 0 15px rgba(110, 86, 207, 0.3);
   transform: translateY(-2px);
 }
 
-.language-button.active {
-  background: rgba(135, 206, 235, 0.3);
-  border-color: rgba(135, 206, 235, 0.5);
-  box-shadow: 0 0 10px rgba(135, 206, 235, 0.2);
+.language-switch-btn {
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  min-width: 45px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  overflow: hidden;
+}
+
+.language-switch-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(110, 86, 207, 0.15),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.language-switch-btn:hover::before {
+  opacity: 1;
+}
+
+.language-switch-btn.active {
+  background: rgba(110, 86, 207, 0.1);
+  color: var(--text-primary);
+  border-color: var(--accent-primary);
+  box-shadow: 
+    0 0 20px rgba(110, 86, 207, 0.2),
+    inset 0 0 10px rgba(110, 86, 207, 0.1);
+  text-shadow: 0 0 8px rgba(110, 86, 207, 0.3);
+}
+
+.language-switch-btn:hover:not(.active) {
+  color: var(--text-primary);
+  border-color: var(--accent-primary);
+  background: rgba(110, 86, 207, 0.1);
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.1),
+    inset 0 0 5px rgba(110, 86, 207, 0.1);
 }
 
 @media (max-width: 768px) {
   .language-switch-container {
-    top: 1rem;
-    right: 1rem;
-    padding: 0.4rem;
+    top: 12px;
+    right: 12px;
+    padding: 3px;
   }
 
-  .language-button {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.8rem;
+  .language-switch-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
     min-width: 40px;
   }
-} 
+}

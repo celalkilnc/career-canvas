@@ -1,176 +1,366 @@
+/* Modern Experience Variables */
+:root {
+  --bg-primary: #0F1115;
+  --bg-secondary: #151820;
+  --accent-primary: #6E56CF;
+  --accent-secondary: #7C3AED;
+  --text-primary: #FFFFFF;
+  --text-secondary: #A1A1AA;
+  --gradient-start: #6E56CF;
+  --gradient-end: #4F46E5;
+  --card-border: rgba(110, 86, 207, 0.15);
+  --card-bg: rgba(21, 24, 32, 0.95);
+  --glow-color: rgba(110, 86, 207, 0.15);
+}
+
 .experiance {
   min-height: 100vh;
-  padding: 4rem 2rem;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  position: relative;
+  overflow: visible;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+}
+
+.experiance::before {
+  content: '';
+  position: absolute;
+  top: -50vh;
+  left: 0;
+  right: 0;
+  bottom: -50vh;
+  background: 
+    radial-gradient(circle at 10% 0%, rgba(110, 86, 207, 0.08), transparent 50%),
+    radial-gradient(circle at 90% 100%, rgba(79, 70, 229, 0.08), transparent 50%),
+    var(--bg-primary);
+  pointer-events: none;
+  border: none;
+  margin: 0;
+  z-index: -1;
+}
+
+.experiance-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.experiance-container h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  letter-spacing: 2px;
+  text-shadow: 0 2px 15px var(--glow-color);
+}
+
+.experiance-container h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
+  box-shadow: 0 0 20px var(--glow-color);
+}
+
+.experiance-grid {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background: rgba(10, 22, 38, 255) !important;
-  backdrop-filter: blur(10px);
-}
-
-.experiance h1 {
-  color: #ffffffdd;
-  font-size: 3rem;
-  margin-bottom: 4rem;
-}
-
-.timeline {
   position: relative;
-  width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 0;
 }
 
-.timeline-line {
+/* Timeline line */
+.experiance-grid::before {
+  content: '';
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   width: 2px;
   height: 100%;
-  background: rgba(135, 206, 235, 0.3);
-  box-shadow: 0 0 15px rgba(135, 206, 235, 0.15),
-              0 0 5px rgba(135, 206, 235, 0.2);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--accent-primary),
+    var(--accent-secondary),
+    transparent
+  );
+  opacity: 0.3;
+  box-shadow: 0 0 15px var(--glow-color);
 }
 
-.timeline-container {
+.experiance-card {
+  width: calc(50% - 30px);
+  margin: 30px 0;
   position: relative;
-  padding: 2rem 0;
+  padding: 35px;
+  border-radius: 16px;
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  cursor: default;
 }
 
-.timeline-item {
-  position: relative;
-  width: 50%;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  transition: transform 0.3s ease;  
+/* Even numbered cards go to the right */
+.experiance-card:nth-child(even) {
+  margin-left: calc(50% + 30px);
 }
 
-.timeline-item:hover {
-  transform: translateY(-5px);
+/* Odd numbered cards go to the left */
+.experiance-card:nth-child(odd) {
+  margin-right: calc(50% + 30px);
 }
 
-.timeline-dot {
+/* Timeline dots */
+.experiance-card::before {
+  content: '';
   position: absolute;
   width: 16px;
   height: 16px;
-  background: #87CEEB;
   border-radius: 50%;
-  top: 2rem;
-  border: 4px solid #1a1a1a;
-  box-shadow: 0 0 10px rgba(135, 206, 235, 0.3),
-              0 0 5px rgba(135, 206, 235, 0.4);
+  background: var(--accent-primary);
+  border: 3px solid var(--bg-primary);
+  box-shadow: 0 0 10px var(--glow-color);
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.timeline-item.left {
-  left: 0;
-  padding-right: 3rem;
+/* Position dots based on even/odd */
+.experiance-card:nth-child(even)::before {
+  left: -38px;
 }
 
-.timeline-item.right {
+.experiance-card:nth-child(odd)::before {
+  right: -38px;
+}
+
+/* Timeline connectors */
+.experiance-card::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: var(--accent-primary);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Position connectors based on even/odd */
+.experiance-card:nth-child(even)::after {
+  left: -20px;
+}
+
+.experiance-card:nth-child(odd)::after {
+  right: -20px;
+}
+
+.experiance-card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.experiance-glow {
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  top: 50%;
   left: 50%;
-  padding-left: 3rem;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(110, 86, 207, 0.15) 0%,
+    transparent 45%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
 }
 
-.timeline-item.left .timeline-dot {
-  right: -8px;
+.experiance-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-primary);
+  box-shadow: 
+    0 12px 30px rgba(0, 0, 0, 0.2),
+    0 0 0 1px var(--accent-primary),
+    0 0 20px rgba(110, 86, 207, 0.3);
 }
 
-.timeline-item.right .timeline-dot {
-  left: -8px;
-}
-
-.timeline-content {
-  background: rgba(30, 41, 59, 0.5);
-  border-radius: 12px;
-  padding: 2rem;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.company-name {
-  color: #87CEEB;
-  font-size: 1.75rem;
-  font-weight: 500;
-  margin: 0 0 0.5rem;
+.experiance-card:hover .experiance-glow {
+  opacity: 1;
 }
 
 .job-title {
-  color: #fff;
   font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, var(--text-primary), #E2E8F0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.5px;
+}
+
+.company-name {
+  font-size: 1.2rem;
+  color: var(--accent-primary);
+  margin-bottom: 15px;
   font-weight: 500;
-  margin: 0 0 0.5rem;
+  letter-spacing: 0.5px;
 }
 
-.date {
-  color: rgba(255, 255, 255, 0.7);
+.job-date {
   font-size: 1rem;
-  margin: 0 0 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.description {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1rem;
-  line-height: 1.6;
-  margin: 0 0 1.5rem;
+.job-date .date-icon {
+  color: var(--accent-primary);
+  opacity: 0.8;
+}
+
+.job-description {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 25px;
+  font-size: 1.05rem;
 }
 
 .technologies {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 12px;
+  margin-top: 20px;
 }
 
 .tech-tag {
-  background: rgba(30, 41, 59, 0.8);
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: rgba(110, 86, 207, 0.1);
+  color: var(--accent-primary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid var(--card-border);
+  letter-spacing: 0.5px;
 }
 
+.tech-tag:hover {
+  background: rgba(110, 86, 207, 0.2);
+  transform: translateY(-2px);
+  border-color: var(--accent-primary);
+  box-shadow: 0 5px 15px rgba(110, 86, 207, 0.2);
+}
+
+.current-job {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 
+    0 4px 15px rgba(110, 86, 207, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Animation for cards */
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.experiance-card {
+  animation: cardAppear 0.6s ease-out forwards;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .experiance {
-    padding: 2rem 1rem;
+  .experiance-grid::before {
+    left: 30px;
   }
 
-  .experiance h1 {
+  .experiance-card {
+    width: calc(100% - 60px);
+    margin: 30px 0 30px 60px !important;
+  }
+
+  .experiance-card::before {
+    left: -38px !important;
+  }
+
+  .experiance-card::after {
+    left: -20px !important;
+  }
+
+  .experiance-container {
+    padding: 60px 15px;
+    margin: 0 auto;
+  }
+
+  .experiance-container h1 {
     font-size: 2.5rem;
-    margin-bottom: 3rem;
   }
 
-  .timeline-line {
-    left: 1rem;
-    box-shadow: 0 0 10px rgba(135, 206, 235, 0.15),
-                0 0 3px rgba(135, 206, 235, 0.2);
-  }
-
-  .timeline-item {
-    width: 100%;
-    padding: 0 0 2rem 3rem;
-  }
-
-  .timeline-item.left,
-  .timeline-item.right {
-    left: 0;
-    padding-left: 3rem;
-    padding-right: 1rem;
-  }
-
-  .timeline-item.left .timeline-dot,
-  .timeline-item.right .timeline-dot {
-    left: -8px;
-  }
-
-  .timeline-content {
-    padding: 1.5rem;
-  }
-
-  .company-name {
-    font-size: 1.5rem;
+  .experiance-card {
+    padding: 25px;
   }
 
   .job-title {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
+  }
+
+  .company-name {
+    font-size: 1.1rem;
+  }
+
+  .current-job {
+    position: relative;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+
+  .tech-tag {
+    padding: 6px 12px;
+    font-size: 0.9rem;
   }
 } 

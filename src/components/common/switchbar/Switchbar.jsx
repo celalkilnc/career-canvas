@@ -55,7 +55,7 @@ function Switchbar() {
 
   return (
     <nav className="switchbar">
-      <ul className="switchBar">
+      <ul className="switchBar no-copy">
         {[
           { id: 'information', label: t('sections.information') },
           { id: 'experiance', label: t('sections.experience') },
@@ -67,6 +67,7 @@ function Switchbar() {
             key={section.id} 
             className={`switch-item ${activePage === section.id ? 'active' : ''}`}
             onClick={() => handleClick(section.id)}
+            data-tooltip={section.label}
           >
             <div className={`switch-dot ${activePage === section.id ? 'active' : ''}`} />
           </li>

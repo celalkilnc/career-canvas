@@ -1,4 +1,4 @@
-/* Modern Education Variables */
+/* Modern Experience Variables */
 :root {
   --bg-primary: #0F1115;
   --bg-secondary: #151820;
@@ -13,19 +13,16 @@
   --glow-color: rgba(110, 86, 207, 0.15);
 }
 
-.education {
+.experience {
   min-height: 100vh;
-  background: transparent;
+  background: var(--bg-primary);
   color: var(--text-primary);
   position: relative;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  z-index: 2;
+  padding: 80px 0;
 }
 
-.education::before {
+.experience::before {
   content: '';
   position: absolute;
   top: 0;
@@ -33,23 +30,20 @@
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(circle at 90% 0%, rgba(110, 86, 207, 0.08), transparent 50%),
-    radial-gradient(circle at 10% 100%, rgba(79, 70, 229, 0.08), transparent 50%),
-    var(--bg-primary);
+    radial-gradient(circle at 10% 10%, rgba(110, 86, 207, 0.1), transparent 30%),
+    radial-gradient(circle at 90% 90%, rgba(79, 70, 229, 0.1), transparent 30%);
   pointer-events: none;
-  z-index: -1;
 }
 
-.education-container {
+.experience-container {
   max-width: 1200px;
-  width: 100%;
   margin: 0 auto;
   padding: 0 20px;
   position: relative;
-  z-index: 3;
+  z-index: 1;
 }
 
-.education-container h1 {
+.experience-container h1 {
   font-size: 3.5rem;
   font-weight: 700;
   text-align: center;
@@ -66,7 +60,7 @@
   text-shadow: 0 2px 15px var(--glow-color);
 }
 
-.education-container h1::after {
+.experience-container h1::after {
   content: '';
   position: absolute;
   bottom: -10px;
@@ -78,18 +72,14 @@
   box-shadow: 0 0 20px var(--glow-color);
 }
 
-.education-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.experience-grid {
+  display: flex;
+  flex-direction: column;
   gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
   padding: 20px 0;
-  position: relative;
-  z-index: 3;
 }
 
-.education-card {
+.experience-card {
   position: relative;
   padding: 35px;
   border-radius: 16px;
@@ -100,16 +90,14 @@
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   cursor: default;
-  height: 100%;
-  z-index: 3;
 }
 
-.education-card-content {
+.experience-card-content {
   position: relative;
   z-index: 2;
 }
 
-.education-glow {
+.experience-glow {
   position: absolute;
   width: 150%;
   height: 150%;
@@ -127,7 +115,7 @@
   z-index: 1;
 }
 
-.education-card:hover {
+.experience-card:hover {
   transform: translateY(-5px);
   border-color: var(--accent-primary);
   box-shadow: 
@@ -136,11 +124,11 @@
     0 0 20px rgba(110, 86, 207, 0.3);
 }
 
-.education-card:hover .education-glow {
+.experience-card:hover .experience-glow {
   opacity: 1;
 }
 
-.school-name {
+.job-title {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 10px;
@@ -151,7 +139,7 @@
   letter-spacing: 0.5px;
 }
 
-.degree {
+.company-name {
   font-size: 1.2rem;
   color: var(--accent-primary);
   margin-bottom: 15px;
@@ -159,7 +147,7 @@
   letter-spacing: 0.5px;
 }
 
-.education-date {
+.job-date {
   font-size: 1rem;
   color: var(--text-secondary);
   margin-bottom: 20px;
@@ -168,26 +156,26 @@
   gap: 8px;
 }
 
-.date-icon {
+.job-date .date-icon {
   color: var(--accent-primary);
   opacity: 0.8;
 }
 
-.education-description {
+.job-description {
   color: var(--text-secondary);
   line-height: 1.8;
   margin-bottom: 25px;
   font-size: 1.05rem;
 }
 
-.courses {
+.technologies {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 20px;
 }
 
-.course-tag {
+.tech-tag {
   padding: 8px 16px;
   border-radius: 20px;
   background: rgba(110, 86, 207, 0.1);
@@ -199,14 +187,14 @@
   letter-spacing: 0.5px;
 }
 
-.course-tag:hover {
+.tech-tag:hover {
   background: rgba(110, 86, 207, 0.2);
   transform: translateY(-2px);
   border-color: var(--accent-primary);
   box-shadow: 0 5px 15px rgba(110, 86, 207, 0.2);
 }
 
-.current-education {
+.current-job {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -234,7 +222,7 @@
   }
 }
 
-.education-card {
+.experience-card {
   animation: cardAppear 0.6s ease-out forwards;
   --mouse-x: 50%;
   --mouse-y: 50%;
@@ -242,38 +230,27 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .education {
-    height: auto;
-    padding: 60px 0;
-  }
-
-  .education-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .education-container {
+  .experience-container {
     padding: 0 15px;
   }
 
-  .education-container h1 {
+  .experience-container h1 {
     font-size: 2.5rem;
-    margin-bottom: 30px;
   }
 
-  .education-card {
+  .experience-card {
     padding: 25px;
   }
 
-  .school-name {
+  .job-title {
     font-size: 1.3rem;
   }
 
-  .degree {
+  .company-name {
     font-size: 1.1rem;
   }
 
-  .current-education {
+  .current-job {
     position: relative;
     top: 0;
     right: 0;
@@ -281,8 +258,8 @@
     margin-bottom: 15px;
   }
 
-  .course-tag {
+  .tech-tag {
     padding: 6px 12px;
     font-size: 0.9rem;
   }
-}
+} 

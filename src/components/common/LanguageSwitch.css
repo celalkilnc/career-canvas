@@ -1,54 +1,49 @@
-/* Eğer bu dosya yoksa oluşturun */
 .language-switch-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
   display: flex;
-  align-items: center;
-  gap: 8px;
+  background: #0F1115;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
   padding: 4px;
-  border-radius: 4px;
-  /* Yarı saydam ve bulanık arka plan efekti */
-  backdrop-filter: blur(8px);
-  /* Arka planı daha koyu yaptık */
-  background: rgba(0, 0, 0, 0.25);
-  /* Beyaz gölge ekledik */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15),
-              0 0 2px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.language-button {
-  padding: 4px 8px;
+.language-switch-button {
+  padding: 6px 16px;
+  background: transparent;
   border: none;
-  border-radius: 4px;
-  /* Buton arka planını da koyulaştırdık */
-  background: rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.9);
-  cursor: pointer;
+  border-radius: 25px;
+  color: rgba(255, 255, 255, 0.5);
   font-size: 14px;
-  transition: all 0.2s ease;
-}
-
-.language-button:hover {
-  background: rgba(255, 255, 255, 0.15);
-  /* Hover durumunda hafif beyaz gölge */
-  box-shadow: 0 0 4px rgba(255, 255, 255, 0.1);
-}
-
-.language-button.active {
-  background: rgba(255, 255, 255, 0.2);
   font-weight: 500;
-  /* Aktif butonda daha belirgin beyaz gölge */
-  box-shadow: 0 0 6px rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 42px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  outline: none;
+  user-select: none;
 }
 
-/* Mobil için medya sorgusu */
-@media screen and (max-width: 768px) {
-  .language-switch-container {
-    padding: 2px;
-    gap: 4px;
-  }
+ .language-switch-button.active {
+  background: #23262E;
+  color: #FFFFFF;
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
 
-  .language-button {
-    padding: 4px 6px;
-    font-size: 12px;
-    min-width: 30px;
+.language-switch-button:not(.active):hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+   .language-switch-container {
+    top: 12px;
+    right: 12px;
+    transform: scale(0.95);
   }
-} 
+}
