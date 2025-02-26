@@ -3,10 +3,16 @@
   line-height: 1.5;
   font-weight: 400;
 
+  --bg-primary: #0F1115;
+  --bg-secondary: #151820;
+  --accent-primary: #6E56CF;
+  --accent-secondary: #7C3AED;
+  --text-primary: #FFFFFF;
+  --text-secondary: #A1A1AA;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: var(--bg-primary);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -18,6 +24,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 #root {
@@ -36,31 +43,37 @@ body {
 /* Genel scrollbar stilleri */
 ::-webkit-scrollbar {
   width: 10px;
-  background: rgba(10, 22, 38, 0.2);
+  background: transparent;
 }
 
 /* Scroll çubuğu arka plan rengi */
 ::-webkit-scrollbar-track {
-  background: rgba(10, 22, 38, 0.8);
+  background: rgba(21, 24, 32, 0.3);
   border-radius: 10px;
+  margin: 5px;
 }
 
 /* Scroll çubuğu rengi */
 ::-webkit-scrollbar-thumb {
-  background: rgba(135, 206, 235, 0.3);
+  background: rgba(110, 86, 207, 0.2);
   border-radius: 10px;
-  border: 2px solid rgba(10, 22, 38, 0.8);
+  border: 3px solid transparent;
+  background-clip: padding-box;
   transition: all 0.3s ease;
 }
 
-/* Zamanla kaybolduğunda scroll çubuğu stil */
+/* Hover durumunda scroll çubuğu stil */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(135, 206, 235, 0.5);
+  background: var(--accent-primary);
+  border: 2px solid transparent;
+  background-clip: padding-box;
 }
 
-/* Scroll çubuğu üzerine gelindiğinde kalınlaşma */
+/* Active durumunda scroll çubuğu stil */
 ::-webkit-scrollbar-thumb:active {
-  background: #333;
+  background: var(--accent-secondary);
+  border: 2px solid transparent;
+  background-clip: padding-box;
 }
 
 /* Scroll çubuğu kenarlığı */
@@ -89,7 +102,7 @@ body {
   margin: 0;
   padding: 0;
   scrollbar-width: thin;
-  scrollbar-color: rgba(135, 206, 235, 0.3) rgba(10, 22, 38, 0.8);
+  scrollbar-color: rgba(110, 86, 207, 0.2) rgba(21, 24, 32, 0.3);
 }
 
 img {
