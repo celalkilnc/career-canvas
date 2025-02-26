@@ -319,7 +319,7 @@
 
   .experiance-card {
     width: calc(100% - 60px);
-    margin: 30px 0 30px 60px !important;
+    margin: 30px 0 30px 40px !important;
   }
 
   .experiance-card::before {
