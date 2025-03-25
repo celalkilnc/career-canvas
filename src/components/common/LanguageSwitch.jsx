@@ -150,7 +150,7 @@ const LanguageSwitch = () => {
   }, []);
 
   return (
-    <Container className="switchbar">
+    <Container className="language-switch-container">
       <ButtonGroup>
         <Button
           className={`switchbar-btn ${i18n.language === 'tr' ? 'active' : ''}`}

@@ -54,8 +54,8 @@ function Switchbar() {
   };
 
   return (
-    <nav className="switchbar">
-      <ul className="switchBar no-copy">
+    <nav className="switchbar" style={{ display: 'none' }}>
+      <ul className="switchBar no-copy" style={{ display: 'none' }}>
         {[
           { id: 'information', label: t('sections.information') },
           { id: 'experiance', label: t('sections.experience') },

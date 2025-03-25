@@ -1,4 +1,18 @@
 /* Reset ve temel stiller */
+:root {
+  --bg-primary: #0F1115;
+  --bg-secondary: #151820;
+  --accent-primary: #6E56CF;
+  --accent-secondary: #7C3AED;
+  --text-primary: #FFFFFF;
+  --text-secondary: #A1A1AA;
+  --gradient-start: #6E56CF;
+  --gradient-end: #4F46E5;
+  --card-border: rgba(110, 86, 207, 0.15);
+  --card-bg: rgba(21, 24, 32, 0.95);
+  --glow-color: rgba(110, 86, 207, 0.15);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -36,8 +50,27 @@ html, body {
 }
 
 body {
-  background-color: #242424;
-  color: rgba(255, 255, 255, 0.87);
+  margin: 0;
+  padding: 0;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 10% 0%, rgba(110, 86, 207, 0.08), transparent 50%),
+    radial-gradient(circle at 90% 100%, rgba(79, 70, 229, 0.08), transparent 50%),
+    var(--bg-primary);
+  pointer-events: none;
+  z-index: -1;
 }
 
 #root {
@@ -46,10 +79,10 @@ body {
 }
 
 .app {
+  position: relative;
   min-height: 100vh;
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  overflow-x: hidden;
 }
 
 /* Sayfa bölümleri için genel stil */
@@ -83,4 +116,21 @@ html {
 
 .main-content {
   width: 100%;
+}
+
+.switchbar {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .switchbar {
+    right: 10px;
+  }
 }
